@@ -1,0 +1,17 @@
+<!-- item_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create/Edit Item</title>
+</head>
+<body>
+    <h1>Create/Edit Item</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.description }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'item_list' %}">Cancel</a>
+</body>
+</html>
